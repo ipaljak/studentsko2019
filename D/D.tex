@@ -1,0 +1,92 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem statement
+
+\begin{statement}[
+  timelimit=1 s,
+  memorylimit=512 MiB,
+]{D: Dramatični Dvoboj}
+
+Podne. Livada ispred fotogenične zgrade imenovane po Heydar Aliyevu. Gospodin
+Malnar, protagonist ove anegdote, naređuje svojoj vjernoj postrojbi olimpijaca
+da se \textbf{preklope}. U tom trenutku jedan hrabar gospodin, vodič hrvatskog
+tima i također antagonist, žurnim korakom prilazi gospodinu Malnaru. Nitko nije
+znao da je to bio početak epskog sukoba o kojem će se pričati godinama.
+
+Kako bi riješili taj sukob, odlučiše zaigrati igru. Opće je poznato da u
+Azerbajdžanu postoji $n$ različitih vrsta pravokutnih tepiha te da $i$-ta vrsta
+ima stranice $S$ i $D$, duljina $s_i$ i $d_i$. Iz nekog neobičnog razloga,
+tepisima se uvijek stranica $S$ postavlja paralelno s ekvatorom. Za potrebe
+igre, postoji $k$ hrpa tepiha na tlu te se na početku igre $i$-ta hrpa sastoji
+samo od jednog tepiha vrste $a_i$. U svakom potezu igrač pažljivo odabire tepih
+neke vrste te ga postavlja na neku od hrpa tepiha na tlu. Prilikom postavljanja
+tepiha je bitno da tepih koji se trenutno nalazi na vrhu ima strogo veću širinu
+i dužinu od tepiha koji se stavlja na nj. Igrači poteze vuku naizmjence, a igru
+započinje vodič (gospodin Malnar je ipak gospodin).
+
+Večer. Pred sam dvoboj gospodin Malnar je, kontrolirajući vjetar, zarotirao neke
+od $k$ tepiha koji se nalaze na tlu. Tim tepisima i samo tim tepisima je
+stranica $D$ usporedna s ekvatorom. Za sve ostale tepihe te za sve tepihe kojima
+će se rukovati tijekom igre mora vrijediti da im po pravilima prirode stranica
+$S$ bude usporedna s ekvatorom.
+
+Naravno, gospodin Malnar je odigrao savršeno, a i na veliko iznenađenje njegov
+protivnik, no savršena logika nije dovoljna da biste porazili gospodina
+Malnara. Nažalost, iz podataka sačuvanih o dvoboju, poznate su brojke $s_i$ i
+$d_i$ svih vrsta tepiha te su poznate vrste svih $k$ tepiha koji su bili na tlu.
+Jedina je nepoznanica kako je Malnarov vjetar utjecao na dvoboj. Zato vas molimo
+da na temelju tih podataka odredite neki mogući skup tepiha koje je gospodin
+Malnar zarotirao svojim poznatim vjetrom kako bi u konačnici pobjedio u igri.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input
+\subsection*{Ulazni podaci}
+U prvom su retku cijeli brojevi $n$ i $k$ $(1 \le n, k \le 10^5)$.
+
+U sljedećih se $n$ redaka nalaze po dva broja $s_i$ i $d_i$
+$(1 \le s_i, d_i \le 10^5)$ iz teksta zadatka. Također je poznato
+da niti jedna dva tepiha nemaju istu širinu te da niti jedna dva tepiha
+nemaju istu dužinu.
+
+U posljednjem se retku nalazi $k$ brojeva $a_i$ $(1 \le a_i \le n)$ iz
+teksta zadatka.
+
+Ulazni podaci su takvi da rješenje, iako ne nužno jedinstveno, uvijek
+postoji.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output
+\subsection*{Izlazni podaci}
+U jedini redak ispišite niz nula i jedinica duljine $k$. Ako je $i$-ti broj
+jedinica, tada je gospodin Malnar svojim vjetrom zarotirao $i$-ti tepih na
+tlu.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Examples
+\subsection*{Probni primjeri}
+%\begin{tabularx}{\textwidth}{X'X'X}
+  %\textbf{ulaz}
+  %\linespread{1}{\verbatiminput{test/I.dummy.in.1}}
+  %\textbf{izlaz}
+  %\linespread{1}{\verbatiminput{test/I.dummy.out.1}} &
+  %\textbf{ulaz}
+  %\linespread{1}{\verbatiminput{test/I.dummy.in.2}}
+  %\textbf{izlaz}
+  %\linespread{1}{\verbatiminput{test/I.dummy.out.2}} &
+  %\textbf{ulaz}
+  %\linespread{1}{\verbatiminput{test/I.dummy.in.3}}
+  %\textbf{izlaz}
+  %\linespread{1}{\verbatiminput{test/I.dummy.out.3}}
+%\end{tabularx}
+
+\textbf{TODO}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We're done
+\end{statement}
+
+%%% Local Variables:
+%%% mode: latex
+%%% mode: flyspell
+%%% ispell-local-dictionary: "croatian"
+%%% TeX-master: "../studentsko2018.tex"
+%%% End:

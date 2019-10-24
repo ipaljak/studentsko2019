@@ -1,0 +1,81 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem statement
+\begin{statement}[
+  timelimit=1 s,
+  memorylimit=512 MiB,
+]{E: Elokventni Evaluator}
+
+U maloj kućici na livadi, u kojoj jela s roštilja po recepturi starih
+leskovačkih majstora priprema Kostadin Stefanović, objeduju Matej i gospodin
+Malnar. Ovoga puta je Matej sazvao sastanak, a tema razgovora je izrada novog
+sustava za evaluaciju, starog je ipak vrijeme donekle pregazilo.
+Gospodin Malnar se sa svime složi te nadoda: ``...i evaluator mora biti
+elokventniji.''. ``Elokventniji? Kako to misliš elokventniji?! Jesi li siguran
+da su ovo vrganji?'', odgovorio je Matej. Malnar mu tada objasni kako mu je
+dosta gledanja u jedne te iste poruke poput \texttt{Točno!},
+\texttt{Prekoračeno vremensko ograničenje!} ili \texttt{Pogreška pri kompilaciji!}.
+Evaluatori bi se trebali prilagoditi zadatku i ponekad prokomentirati izlaz
+natjecateljeva programa, ipak je budućnost u umjetnoj inteligenciji. Vaš je
+zadatak pomoći Mateju da izradi prototip jednog takvog evaluatora.
+
+Zamislite zadatak u kojem natjecatelj u jednoj liniji mora ispisati matematički
+izraz oblika:
+\begin{center}
+\texttt{<broj><operacija><broj>=<broj>}
+\end{center}
+pri čemu \texttt{<broj>}
+označava bilo koji pozitivan cijeli broj manji ili jednak $10^9$ bez vodećih nula,
+\texttt{<operacija>} je jedan od znakova \texttt{+}, \texttt{-}, \texttt{*} ili
+\texttt{/} koji predstavlja jednu od četiri osnovne matematičke operacije.
+Elokventni će evaluator na ovom zadatku prikazati jednu od sljedećih poruka:
+
+\begin{itemize}
+  \item \texttt{Tocno} -- ispisan je matematički ispravan izraz u odgovarajućem formatu.
+  \item \texttt{Izraz nije ispravno formatiran} -- ispisani izraz ne odgovara zadanom formatu.
+  \item \texttt{Netocno, umjesto <izraz1> mogli ste ispisati <izraz2>} --
+    ispisani izraz (\texttt{<izraz1>}) je ispravno formatiran, ali nije
+    matematički točan te je promjenom \textbf{najviše dva} znaka u ispisu bilo
+    moguće dobiti potpuno ispravan izraz (\texttt{<izraz2>}).
+  \item \texttt{Potpuno netocno} -- ispisani izraz je ispravno formatiran,
+    matematički nije točan i nije ga moguće ispraviti koristeći najviše dvije
+    zamjene znakova.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input
+\subsection*{Ulazni podaci}
+U prvoj se liniji nalazi rijeć od najviše $30$ znakova koja predstavlja
+natjecateljevo rješenje iz teksta zadatka. Ta riječ će se sastojati isključivo
+od dekadskih znamenaka (\texttt{0}, \texttt{1}, \dots, \texttt{2}), osnovnih
+računskih operatora (\texttt{+}, \texttt{-}, \texttt{*}, \texttt{/}) i znaka
+jednakosti (\texttt{=}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output
+\subsection*{Izlazni podaci}
+U jedini redak ispišite odgovarajuću poruku elokventnog evaluatora iz
+teksta zadatka.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Examples
+\subsection*{Probni primjeri}
+  \begin{tabularx}{\textwidth}{X'X}
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/E.dummy.in.1}}
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/E.dummy.out.1}} &
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/E.dummy.in.2}}
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/E.dummy.out.2}}
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We're done
+\end{statement}
+
+%%% Local Variables:
+%%% mode: latex
+%%% mode: flyspell
+%%% ispell-local-dictionary: "croatian"
+%%% TeX-master: "../studentsko2018.tex"
+%%% End:
