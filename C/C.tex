@@ -1,0 +1,68 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem statement
+\begin{statement}[
+  timelimit=1 s,
+  memorylimit=512 MiB,
+]{C: Crni Ceh}
+
+Na jednom programerskom natjecanju sudjeluje $n$ natjecatelja. Prije natjecanja
+svaki je natjecatelj od gospodina Malnara dobio majicu. Neki su natjecatelji
+dobili žute, a neki crne majice, čime je nastalo rivalstvo između crnog i žutog
+tima.
+
+Na početku natjecanja svi natjecatelji imaju $0$ bodova te je za svakoga poznata
+boja njegove majice. Tijekom natjecanja dogodilo se $q$ promjena u rezultatima.
+U $i$-toj promjeni je natjecatelj $x_i$ upravo dobio još $d_i$ bodova.
+
+Svaki natjecatelj u žutoj majici računa svoju kaznu (tzv.\ \textit{crni ceh})
+kao broj natjecatelja u crnoj majici koji u tom trenutku imaju strogo više
+bodova od njega. Izračunajte i ispišite koliki je zbroj kazni natjecatelja u
+žutim majicama nakon svake promjene u bodovima.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input
+\subsection*{Ulazni podaci}
+U prvom su retku prirodni brojevi $n$ $(1 \le n \le 10^5) $ i
+$q$ $(1 \le q \le 3 \cdot 10^5)$ iz teksta zadatka.
+
+U sljedećem je retku riječ od $n$ znakova koji opisuje boju majice svakog
+natjecatelja. Svaki znak u toj riječi je jedno od velikih slova \texttt{C}
+ili \texttt{Z} koji označava boju majice $i$-tog natjecatelja (crna ili žuta).
+Postojat će barem jedan natjecatelj sa crnom i barem jedan natjecatelj sa žutom
+majicom.
+
+U sljedećih se $q$ redaka nalaze po dva prirodna broja $x_i$ $(1 \le x_i \le n)$ i
+$d_i$ $(1 \le d_i \le 3 \cdot 10^5)$
+
+Maksimalan broj bodova koje neki natjecatelj može osvojti na natjecanju je
+$3 \cdot 10^5$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output
+\subsection*{Izlazni podaci}
+U $i$-ti od $q$ redaka izlaza, ispišite ukupan crni ceh nakon $i$-te promjene.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Examples
+\subsection*{Probni primjeri}
+\begin{tabularx}{\textwidth}{X'X}
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/C.dummy.in.1}}
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/C.dummy.out.1}} &
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/C.dummy.in.2}}
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/C.dummy.out.2}}
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We're done
+\end{statement}
+
+%%% Local Variables:
+%%% mode: latex
+%%% mode: flyspell
+%%% ispell-local-dictionary: "croatian"
+%%% TeX-master: "../studentsko2018.tex"
+%%% End:

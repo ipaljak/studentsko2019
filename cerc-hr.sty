@@ -1,0 +1,109 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cerc-hr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% process the options...
+\ProcessOptions\relax
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% import packages...
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[croatian]{babel}
+\RequirePackage{fancyhdr}
+\RequirePackage{graphicx}
+\RequirePackage{verbatim}
+\RequirePackage{tabularx} 
+\RequirePackage{geometry}
+\RequirePackage{booktabs}
+\RequirePackage{lastpage} % number of pages
+\RequirePackage{titlesec} % custom section spacing
+\RequirePackage{pgfkeys} % enable options
+\RequirePackage[pdfborder={0 0 0}]{hyperref} % enable index creation
+\RequirePackage{import} % enable relative imports
+\RequirePackage{grffile} % enable dots in figure filenames
+\RequirePackage{enumitem} % control itemize whitespace
+%\RequirePackage{mathpazo} % palatino font family
+\RequirePackage{microtype}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% contest and problem parameters..
+\newcommand{\@contestname}{}
+\newcommand{\contestname}[1]{\renewcommand{\@contestname}{#1}}
+\newcommand{\@problemname}{}
+\newcommand{\problemname}[1]{\renewcommand{\@problemname}{#1}}
+\newcommand{\@timelimit}{}
+\newcommand{\timelimit}[1]{\renewcommand{\@timelimit}{#1}}
+\newcommand{\@memorylimit}{}
+\newcommand{\memorylimit}[1]{\renewcommand{\@memorylimit}{#1}}
+\newcommand{\@problemtype}{}
+\newcommand{\problemtype}[1]{\renewcommand{\@problemttype}{#1}}
+\newcommand{\@problempoints}{}
+\newcommand{\problempoints}[1]{\renewcommand{\@problempoints}{#1}}
+
+\pgfkeys{
+  timelimit/.estore in = \@timelimit,
+  memorylimit/.estore in = \@memorylimit,
+  problemtype/.estore in = \@problemtype,
+  problempoints/.estore in = \@problempoints,
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% look and feel...
+\geometry{
+	a4paper,
+	left=27mm,
+	right=27mm,
+	top=35mm,
+	bottom=27mm,
+        headheight=40mm,
+        headsep=6mm,
+}
+\titlespacing*{\section}{0pt}{2ex}{1ex} % space before and after 
+\titlespacing*{\subsection}{0pt}{1ex}{.5ex} % space before and after
+\setlength{\parindent}{0in} % no indent
+\setlength{\parskip}{0.1in} % paragraph skip
+\linespread{1.05} % increase line spread a bit 
+\pagestyle{fancy} % setup header and footer
+\fancyhf{}
+\renewcommand{\headrulewidth}{.2pt}
+\renewcommand{\footrulewidth}{.2pt}
+\fancyhead[L] {
+  \includegraphics[height=.8cm, keepaspectratio=true]{pic/vrsih-logo.pdf}
+}
+\fancyhead[R]{\textsf{\@contestname}}
+\fancyfoot[C]{\textsf{\thepage \hspace{1pt} od \pageref{LastPage}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% environments and macros
+\newenvironment{statement}[2][]{
+  \clearpage
+  \pgfkeys{#1}
+  \problemname{#2}
+  \addtocontents{prl}{
+    \protect\problemline
+    {\@problemname}
+    {\@problemtype}
+    {\@timelimit}
+    {\@memorylimit}
+    {\@problempoints}
+  }
+  %\pdfbookmark{\@problemname}{\@problemname}
+  \phantomsection
+  \addcontentsline{toc}{subsection}{\@problemname}  
+  \markboth{Zadatak \@problemname}{}
+  \section*{Zadatak \@problemname}
+  \vspace{-1em}
+  \-\hspace{1em} \textsf{Vremensko ograničenje: \@timelimit} \\
+  \-\hspace{1em} \textsf{Memorijsko ograničenje: \@memorylimit}
+  \vspace{.5em}
+} {
+}
+\newcolumntype{'}{@{\hskip\tabcolsep\vrule width .2pt\hskip\tabcolsep}}
+\newcommand{\sampleinputs}[2]{
+  \textbf{ulaz} 
+  \linespread{1}{\verbatiminput{#1}}
+  \textbf{izlaz} 
+  \linespread{1}{\verbatiminput{#2}}
+}
+\renewcommand{\t}[1]{\texttt{#1}}

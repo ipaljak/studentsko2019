@@ -1,0 +1,69 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem statement
+\begin{statement}[
+  timelimit=1 s,
+  memorylimit=512 MiB,
+]{A: Alergični Aron}
+
+Nekadašnji najbolji prijatelj gospodina Malnara, Aron, napustio je domovinu te
+je bolju budućnost potražio na jedom pustom, dalekom otoku. Zasigurno se pitate
+zašto je odabrao baš takvu lokaciju, a ne neki velegrad gdje će, pod okriljem
+neke glomazne koorporacije, ostvariti veliku karijeru. Naime, bolju budućnost
+traži tamo gdje nema malenih paradajzića (tzv.\ \textit{cherry rajčica}) niti
+ambrozije na koju je izuzetno alergičan. Kako bi mu napakostio, gospodin Malnar
+u svom je uredu uzgojio biljku ambrozije.
+
+Iako ambrozija nije stablo, zanimljivo je da se Malnarova biljka može prikazati
+kao stablo s $n$ čvorova koji su povezani pomoću $(n-1)$ grana. Prisjetimo se,
+stablo je neusmjereni, povezani graf u kojem između svaka dva čvora postoji
+jedinstven put. Poznato je da su
+alergeni koncentrirani upravo na granama, ali nisu sve grane jednako potentne.
+Gospodin Malnar zna da grana koja povezuje čvorove $u_i$ i $v_i$ ima
+\textit{alergičnost} $w_i$. Shodno tome, iz biljke će izrezati povezani podskup
+grana najveće alergičnosti. Alergičnost podskupa definira se kao umnožak broja
+grana unutar njega sa alergičnošću najnealergičnije grane unutar tog podskupa,
+tj. grane s minimalnom vrijednosti $w_i$. Gospodin Malnar je nepogrešiv i odmah
+je pronašao podskup s najvećom alergičnosti.
+
+Možete li i vi odrediti taj podskup?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input
+\subsection*{Ulazni podaci}
+U prvom je retku prirodni broj $n$ $(1 \le n \le 10^5)$.
+
+U sljedećih se $n-1$ redaka nalaze brojevi $u_i$, $v_i$ i $w_i$
+$(1 \le u_i$, $v_i \le n$, $u_i \neq v_i$, $1 \le w_i \le 10^9)$ koji
+predstavljaju grane kako je opisano u tekstu zadatka.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output
+\subsection*{Izlazni podaci}
+U jedini redak ispišite alergičnost najalergičnijeg povezanog podskupa
+grana ambrozije.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Examples
+\subsection*{Probni primjeri}
+  TODO
+%\begin{tabularx}{\textwidth}{XX'XX}
+    %\textbf{ulaz}
+  %\linespread{1}{\verbatiminput{test/reality.dummy.in.1}} &
+  %\textbf{izlaz}
+  %\linespread{1}{\verbatiminput{test/reality.dummy.out.1}} &
+  %\textbf{ulaz}
+  %\linespread{1}{\verbatiminput{test/reality.dummy.in.2}} &
+  %\textbf{izlaz}
+  %\linespread{1}{\verbatiminput{test/reality.dummy.out.2}}
+%\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We're done
+\end{statement}
+
+%%% Local Variables:
+%%% mode: latex
+%%% mode: flyspell
+%%% ispell-local-dictionary: "croatian"
+%%% TeX-master: "../studentsko2018.tex"
+%%% End:

@@ -1,0 +1,53 @@
+\documentclass[a4paper]{article}
+\usepackage{cerc-hr}
+\usepackage[labelformat=empty]{caption}
+\usepackage{fancyvrb}
+\usepackage{svg}
+\usepackage{float}
+
+\contestname{
+  Natjecanje timova studenata informatičara hrvatskih sveučilišta \\
+  Zagreb, Osijek, Rijeka, Pula,  27. listopada 2019.}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+  \includegraphics[height=3cm]{pic/vrsih-logo.pdf}
+\end{center}
+\vspace{1cm}
+\begin{center}
+  {\Large\textbf{\textsf{Natjecanje timova studenata informatičara hrvatskih sveučilišta}}} \\
+  \vspace{.5cm}
+  {\large{\textsf{Zagreb, Osijek, Rijeka, Pula}}} \\
+  \vspace{.3cm}
+  \textsf{27. listopada 2019.}
+\end{center}
+\vspace{2cm}
+\begin{center}
+  {\large \textbf{Zadaci}}
+  
+  \begin{minipage}{.5\textwidth}
+    \renewcommand\contentsname{}
+    \tableofcontents
+  \end{minipage}
+\end{center}
+\vspace{5cm}
+\begin{center}
+  \includegraphics[height=2cm]{pic/hsin-footer.pdf}
+  \hspace{3cm}
+  \includegraphics[height=2cm]{pic/fer-logo.pdf}
+\end{center}
+\vspace{\fill}
+\clearpage
+\setcounter{page}{1}
+\subimport{A/}{A}
+%\subimport{B/}{B}
+\subimport{C/}{C}
+\subimport{D/}{D}
+\subimport{E/}{E}
+\subimport{F/}{F}
+\subimport{G/}{G}
+\subimport{H/}{H}
+\subimport{I/}{I}
+%\subimport{J/}{J}
+\end{document}
