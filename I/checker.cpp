@@ -123,6 +123,9 @@ void checker(ifstream& fin, ifstream& foff, ifstream& fout) {
       contestant_pics.push_back(row[j]);
   }
 
+  string trash;
+  if (fout >> trash) finish(0, WRONG);
+
   // The total amount of pictures should correspond to the output
   if (contestant_pics.size() != contestant_out) finish(0, WRONG);
 
