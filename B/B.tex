@@ -1,0 +1,64 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem statement
+\begin{statement}[
+  timelimit=1 s,
+  memorylimit=512 MiB,
+]{B: Bliski Brojevi}
+
+Opće je poznato da je gospodin Malnar član \textit{Mense} -- međunarodne
+organizacije u koju se moguće učlaniti isključivo rezultatom na standardiziranom
+IQ testu koji je bolji od $98\%$ ukupne populacije. Možda je manje poznato da je
+gospodin Malnar također član \textit{Menze} -- međunarodne organizacije u koju
+se moguće učlaniti isključivo ako je vaš godišnji unos standardnih porcija u
+restoranima viši od $98\%$ populacije. Jednom se prilikom i sam gospodin Malnar
+zabunio, pa je pri ulasku u Menzu predočio člansku iskaznicu Mense. Vijest se
+brzo širila hodnicima Menze pa je dio znatiželjnih članova odlučio testirati
+Malnarove kognitivne sposobnosti nakon idućeg grupnog objeda.
+
+Znatiželjnici su skupili prazne tanjure i od njih napravili $n$ hrpa tako
+da se prva hrpa sastojala od jednog tanjura, druga od dva, i tako sve do
+$n$-te hrpe koja se sastojala od $n$ tanjura. Potom su te hrpe ispromiješali, a
+gospodin Malnar je trebao odgovarati na $q$ brzopoteznih pitanja. Svako pitanje
+je bilo istog oblika, a glasilo je: ,,Kolika je najmanja razlika u broju tanjura
+nekih dvaju hrpa koje se nalaze između $l$-te i $r$-te hrpe?''. Formalno, neka
+je broj tanjura $i$-te hrpe označen s $p_i$, tada Malnar treba odrediti:
+$$\min_{l \le i < j \le r}{|p_i - p_j|}$$
+
+Zanimljivo je da je gospodin Malnar na sva pitanja odgovorio unutar jedne
+sekunde te da pritom nije potrošio više od $512$ MiB memorije. Vi to
+zasigurno ne možete, ali možda biste mogli napisati takav program.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input
+\subsection*{Ulazni podaci}
+U prvom su retku prirodni brojevi $n$ i $q$ $(1 \le n, q \le 3 \cdot 10^4)$ iz
+teksta zadatka.\\
+U drugom se retku nalazi permutacija $p$ duljine $n$ iz teksta zadatka.\\
+U sljedećih se $q$ redaka nalaze po dva prirodna broja $l$ i $r$
+$(1 \le l < r \le n)$ iz teksta zadatka.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output
+\subsection*{Izlazni podaci}
+U $i$-tom retku ispišite odgovor na $i$-ti upit iz ulaza.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Examples
+\subsection*{Probni primjeri}
+\begin{tabularx}{\textwidth}{X'X}
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/B.dummy.in.1}} &
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/B.dummy.out.1}}
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We're done
+\end{statement}
+
+%%% Local Variables:
+%%% mode: latex
+%%% mode: flyspell
+%%% ispell-local-dictionary: "croatian"
+%%% TeX-master: "../studentsko2018.tex"
+%%% End:
