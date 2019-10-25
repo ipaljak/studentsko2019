@@ -27,7 +27,11 @@ class Test(object):
         assert 1 <= self.n <= MAXN
 
         picrow = ""
-        for row in self.pics:
+        for (i, row) in enumerate(self.pics):
+            if i < self.n / 3 or self.n % 3 == 0:
+                assert len(row) == 3
+            else:
+                assert len(row) == self.n % 3
             for c in row: picrow += c
 
         assert len(picrow) == self.n
@@ -120,7 +124,7 @@ def gen_cases():
         ["AAA",
          "ABB",
          "BBB",
-         "BCC"
+         "BCC",
          "C"]
     ))
 
@@ -131,7 +135,7 @@ def gen_cases():
          "RRR",
          "RRR",
          "RUI",
-         "TLL"
+         "TLL",
          "L"]
     ))
 
