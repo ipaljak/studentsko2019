@@ -1,0 +1,71 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem statement
+\begin{statement}[
+  timelimit=1 s,
+  memorylimit=512 MiB,
+]{J: Jaki Jovsi}
+
+Jovsi je jak dječak. Od malena je volio strojnice pa je ih je često volio
+imitarti, samo iz nekog razloga nije vikao \textit{trtrtrt} ili
+\textit{bambambam}, nego \textit{acacacacac}
+
+Gospodin Malnar želi istovremeno testirati Jovsijevu snagu i sposobnost
+rješavanja zadataka. Tako mu je jednog dana poklonio štap na kojemu je od
+lijevog do desnog kraja ispisano $n$ slova, označenih redom od prvog do $n$-tog.
+Malnar smatra da su simetrični štapovi jako lijepi, zato ga posebno zanimaju
+palindromski parovi -- to su uređeni parovi prirodnih brojeva $(l, r)$, gdje
+$1 \le l \le r \le n$, takvi da je riječ dobivena gledajući samo slova od $l$-te
+do $r$-te pozicije palindrom. Podsjetimo se da je palindrom riječ koja se čita
+jednako slijeva nadesno kao i zdesna nalijevo.
+
+Malnar je zatim odlučio Jovsiju zadati izazov. Izazov se sastoji od prirodnog
+broja $k$ te niza od $k$ palindromskih parova $(l_i, r_i)$ za koje vrijedi
+$l_1 < l_2 < \dots < l_k$ te $r_1 > r_2 > \dots > r_k$. Jovsi mora svojim
+snažnim udarcima redom $k$ puta lomiti štap kako bi po Malnarovoj želji nakon
+$i$-tog loma od štapa ostao palindromski par $(l_i, r_i)$.
+
+Jovsi mora biti spreman na svaku situaciju pa ga zanima koliko postoji
+različitih izazova koje može dobiti od gospodina Malnara. Pomozite Jovsiju i
+ispišite koliko postoji različitih izazova, modulo $998244353$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input
+\subsection*{Ulazni podaci}
+U jedinom je retku riječ koja se sastoji od malih slova engleske abecede, a
+predstavlja niz slova ispisanih na Malnarovom štapu. Riječ će se sastojati
+od najviše milijun znakova.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output
+\subsection*{Izlazni podaci}
+U jedinom retku potrebno je ispisati ostatak pri dijeljenju broja različith
+izazova s $998244353$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Examples
+\subsection*{Probni primjeri}
+\begin{tabularx}{\textwidth}{X'X'X}
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/J.dummy.in.1}}
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/J.dummy.out.1}} &
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/J.dummy.in.2}}
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/J.dummy.out.2}} &
+  \textbf{ulaz}
+  \linespread{1}{\verbatiminput{test/J.dummy.in.3}}
+  \textbf{izlaz}
+  \linespread{1}{\verbatiminput{test/J.dummy.out.3}}
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We're done
+\end{statement}
+
+%%% Local Variables:
+%%% mode: latex
+%%% mode: flyspell
+%%% ispell-local-dictionary: "croatian"
+%%% TeX-master: "../studentsko2018.tex"
+%%% End:
