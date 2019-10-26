@@ -15,29 +15,29 @@ znao da je to bio početak epskog sukoba o kojem će se pričati godinama.
 
 Kako bi riješili taj sukob, odlučiše zaigrati igru. Opće je poznato da u
 Azerbajdžanu postoji $n$ različitih vrsta pravokutnih tepiha te da $i$-ta vrsta
-ima stranice $S$ i $D$, duljina $s_i$ i $d_i$. Iz nekog neobičnog razloga,
-tepisima se uvijek stranica $S$ postavlja paralelno s ekvatorom. Za potrebe
-igre, postoji $k$ hrpa tepiha na tlu te se na početku igre $i$-ta hrpa sastoji
-samo od jednog tepiha vrste $a_i$. U svakom potezu igrač odabire tepih
-neke vrste te ga postavlja na neku od hrpa tepiha na tlu. Prilikom postavljanja
-tepiha je bitno da tepih koji se trenutno nalazi na vrhu ima strogo veću širinu
-i dužinu od tepiha koji se stavlja na nj. Igrači poteze vuku naizmjence, a igru
-započinje vodič (gospodin Malnar je ipak gospodin).
+ima stranice $S$ i $D$, duljina $s_i$ i $d_i$. Igrači na raspolaganju imaju
+beskonačno mnogo tepiha svake vrste. Igra započinje tako da gospodin Malnar
+na tlo postavi točno $k$ tepiha i to tako da $i$-ti postavljeni tepih bude
+tepih vrste $a_i$. Pritom, gospodin Malnar može odrediti hoće li pojedini tepih
+postaviti tako da mu je stranica $S$ ili stranica $D$ paralelna s ekvatorom.
 
-Večer. Pred sam dvoboj gospodin Malnar je, kontrolirajući vjetar, zarotirao neke
-od $k$ tepiha koji se nalaze na tlu. Tim tepisima i samo tim tepisima je
-stranica $D$ usporedna s ekvatorom. Za sve ostale tepihe te za sve tepihe kojima
-će se rukovati tijekom igre mora vrijediti da im po pravilima prirode stranica
-$S$ bude usporedna s ekvatorom.
+U nastavku igre, igrači poteze vuku naizmjence počevši s vodičem, a igru gubi
+onaj igrač koji ne može napraviti potez. U jednom potezu, igrač odabire potpuno
+novi tepih bilo koje vrste te ga pokušava staviti na jedan od tepiha koji se
+nalaze na vrhovima $k$ hrpa tepiha na tlu. Taj se tepih postavlja tako da mu
+je stranica $S$ paralelna s ekvatorom te mora \textbf{u potpunosti} ležati na
+tepihu na kojeg je postavljen. Odnosno, kada se tepih $P$ stavlja na tepih $Q$,
+tada stranica tepiha $P$ koja je paralelna s ekvatorom treba biti strogo manja
+od stranice tepiha $Q$ koja je paralelna s ekvatorom, a stranica tepiha $P$
+koja je okomita na ekvator treba biti strogo manja od stranice tepiha $Q$ koja
+je okomita na ekvator.
 
 Naravno, gospodin Malnar je odigrao savršeno, a i na veliko iznenađenje njegov
-protivnik, no savršena logika nije dovoljna da biste porazili gospodina
-Malnara. Nažalost, iz podataka sačuvanih o dvoboju, poznate su brojke $s_i$ i
+protivnik. Nažalost, iz podataka sačuvanih o dvoboju, poznate su brojke $s_i$ i
 $d_i$ svih vrsta tepiha te su poznate vrste svih $k$ tepiha koji su bili na tlu.
-Jedina je nepoznanica kako je Malnarov vjetar utjecao na dvoboj. Zato vas molimo
-da na temelju tih podataka odredite neki mogući skup tepiha koje je gospodin
-Malnar zarotirao svojim poznatim vjetrom kako bi u konačnici pobjedio u igri.
-Ako takav skup ne postoji, ispišite \texttt{"nemoguce"} (bez navodnika).
+Jedina je nepoznanica kako je gospodin Malnar orijentirao početnih $k$ tepiha.
+Odredite neki od mogućih načina postavljanja prvih $k$ tepiha koji bi mu osigurao
+pobjedu.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Input
@@ -55,11 +55,12 @@ teksta zadatka.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Output
 \subsection*{Izlazni podaci}
-Ako ne postoji skup tepiha koje je gospodin Malnar mogao zarotirati kako bi
-pobijedio, u jedini redak ispišite \texttt{"nemoguce"} (bez navodnika). Inače,
-u jedini redak ispišite niz nula i jedinica duljine $k$. Ako je $i$-ti broj
-jedinica, tada je gospodin Malnar svojim vjetrom zarotirao $i$-ti tepih na
-tlu.
+Ako nije moguće postaviti početnih $k$ tepiha tako da gospodin Malnar pobjedi,
+u jedini redak ispišite \texttt{"nemoguce"} (bez navodnika).
+Inače, u jedini redak ispišite niz nula i jedinica duljine $k$. Ako je $i$-ti broj
+jedinica, tada je gospodin Malnar $i$-ti tepih postavio tako da mu je stranica
+$D$ paralelna s ekvatorom, a inače ga je postavio tako da mu je stranica $S$
+paralelna s ekvatorom.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Examples
