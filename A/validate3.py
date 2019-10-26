@@ -2,11 +2,14 @@
 """Upotreba ./validate3.py test/*.in*"""
 
 import string
+import sys
 
 from math import sqrt
 from itertools import count, islice
 
 MAXN = 10**5
+
+sys.setrecursionlimit(10**6)
 
 def check_tree(node, dad, graph, visited):
     visited[node] = 1
@@ -90,7 +93,6 @@ if __name__ == "__main__":
         if 'dummy' not in batch[0]:
             bc.append([])
         for filename in batch:
-            print(filename)
             print("{}: ".format(filename), end="")
             try:
                 lines = open(filename).readlines()
