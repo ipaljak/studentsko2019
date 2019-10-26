@@ -36,7 +36,7 @@ def check(lines):
 
 
 # Ocekivani clusteri! Ovo vjerojatno zelis promijeniti!
-expected_clusters = {'normalni': 20}
+expected_clusters = {'normalni': 21}
 
 
 def what_cluster(data):
