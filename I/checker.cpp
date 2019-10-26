@@ -119,8 +119,10 @@ void checker(ifstream& fin, ifstream& foff, ifstream& fout) {
       if (row.size() != contestant_out % 3) finish(0, WRONG);
     }
 
-    for (int j = 0; j < (int) row.size(); ++j)
+    for (int j = 0; j < (int) row.size(); ++j) {
       contestant_pics.push_back(row[j]);
+      contestant_cnt[row[j] - 'A']++;
+    }
   }
 
   string trash;
@@ -135,7 +137,7 @@ void checker(ifstream& fin, ifstream& foff, ifstream& fout) {
   bool block_check = true;
   for (int i = 0; i < 26; ++i) {
     if ('A' + i == contestant_pics.back()) continue;
-    block_check &= contestant_cnt[i] % 3 == 0;
+    block_check &= (contestant_cnt[i] % 3) == 0;
   }
 
   if (!block_check) finish(0, WRONG);
