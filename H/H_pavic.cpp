@@ -31,10 +31,16 @@ ll ccw(pt A, pt B, pt C){
 }
 
 inline void ubaci(pt A,int i){
+	int lo = 0, hi = sz - 1;
 	ol_sz[i] = sz;
-	sz++;
-	while(sz >= 3 && ccw(hull[sz - 2], hull[sz - 3], A) <= 0)
-		 sz--;
+	while(lo < hi){
+		int mi = (lo + hi) / 2;
+		if(ccw(hull[mi], hull[mi + 1], A) >= 0)
+			hi = mi;
+		else
+			lo = mi + 1;
+	}
+	sz = hi + 2;
 	tko[i] = hull[sz - 1];
 	hull[sz - 1] = A;
 	gd[i] = sz - 1;
