@@ -1,4 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Problem statement
 
 \begin{statement}[
@@ -17,7 +18,7 @@ Azerbajdžanu postoji $n$ različitih vrsta pravokutnih tepiha te da $i$-ta vrst
 ima stranice $S$ i $D$, duljina $s_i$ i $d_i$. Iz nekog neobičnog razloga,
 tepisima se uvijek stranica $S$ postavlja paralelno s ekvatorom. Za potrebe
 igre, postoji $k$ hrpa tepiha na tlu te se na početku igre $i$-ta hrpa sastoji
-samo od jednog tepiha vrste $a_i$. U svakom potezu igrač pažljivo odabire tepih
+samo od jednog tepiha vrste $a_i$. U svakom potezu igrač odabire tepih
 neke vrste te ga postavlja na neku od hrpa tepiha na tlu. Prilikom postavljanja
 tepiha je bitno da tepih koji se trenutno nalazi na vrhu ima strogo veću širinu
 i dužinu od tepiha koji se stavlja na nj. Igrači poteze vuku naizmjence, a igru
@@ -55,22 +56,21 @@ teksta zadatka.
 % Output
 \subsection*{Izlazni podaci}
 Ako ne postoji skup tepiha koje je gospodin Malnar mogao zarotirati kako bi
-pobijedio, u jedini redak ispišite \texttt{"nemoguce"} (bez navodnika).
-
-Inače, u jedini redak ispišite niz nula i jedinica duljine $k$. Ako je $i$-ti broj
+pobijedio, u jedini redak ispišite \texttt{"nemoguce"} (bez navodnika). Inače,
+u jedini redak ispišite niz nula i jedinica duljine $k$. Ako je $i$-ti broj
 jedinica, tada je gospodin Malnar svojim vjetrom zarotirao $i$-ti tepih na
 tlu.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Examples
 \subsection*{Probni primjeri}
-\begin{tabularx}{\textwidth}{X'X}
+\begin{tabularx}{\textwidth}{XX'XX}
   \textbf{ulaz}
-  \linespread{1}{\verbatiminput{test/D.dummy.in.1}}
+  \linespread{1}{\verbatiminput{test/D.dummy.in.1}} &
   \textbf{izlaz}
   \linespread{1}{\verbatiminput{test/D.dummy.out.1}} &
   \textbf{ulaz}
-  \linespread{1}{\verbatiminput{test/D.dummy.in.2}}
+  \linespread{1}{\verbatiminput{test/D.dummy.in.2}} &
   \textbf{izlaz}
   \linespread{1}{\verbatiminput{test/D.dummy.out.2}}
 \end{tabularx}
