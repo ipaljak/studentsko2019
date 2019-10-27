@@ -16,7 +16,7 @@ def check(lines):
     n, q = map(int, lines[0].split())
 
     assert 1 <= n <= MAXN, "n je izvan intervala"
-    assert 2 <= q <= MAXQ, "q je izvan intervala"
+    assert 1 <= q <= MAXQ, "q je izvan intervala"
     nl.append("{} {}{}".format(n, q, E))
 
     c = lines[1][:-1]
@@ -30,6 +30,8 @@ def check(lines):
         assert col == 'C' or col == 'Z', "nepostojeca boja majice"
         if col == 'C': c_cnt += 1
         if col == 'Z': z_cnt += 1
+
+    assert c_cnt >= 1 and z_cnt >= 1, "svi natjecatelji imaju istu majicu"
 
     points = [0] * n
     for i in range(q):

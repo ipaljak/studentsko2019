@@ -24,19 +24,20 @@ izraz oblika:
 \texttt{<broj><operacija><broj>=<broj>}
 \end{center}
 pri čemu \texttt{<broj>}
-označava bilo koji pozitivan cijeli broj manji ili jednak $10^9$ bez vodećih nula,
+označava bilo koji pozitivan cijeli broj manji ili jednak $10^9$ bez vodećih nula, a
 \texttt{<operacija>} je jedan od znakova \texttt{+}, \texttt{-}, \texttt{*} ili
-\texttt{/} koji predstavlja jednu od četiri osnovne matematičke operacije.
+\texttt{/} koji predstavlja jednu od četiri osnovne matematičke operacije. Izraz
+koji zadovoljava ova svojstva je \textit{dobro formatiran}.
 Elokventni će evaluator na ovom zadatku prikazati jednu od sljedećih poruka:
 
 \begin{itemize}
-  \item \texttt{Tocno} -- ispisan je matematički ispravan izraz u odgovarajućem formatu.
+  \item \texttt{Tocno} -- ispisan je matematički ispravan izraz koji je dobro formatiran.
   \item \texttt{Izraz nije ispravno formatiran} -- ispisani izraz ne odgovara zadanom formatu.
   \item \texttt{Netocno, umjesto <izraz1> mogli ste ispisati <izraz2>} --
-    ispisani izraz (\texttt{<izraz1>}) je ispravno formatiran, ali nije
+    ispisani izraz (\texttt{<izraz1>}) je dobro formatiran, ali nije
     matematički točan te je promjenom \textbf{najviše dva} znaka u ispisu bilo
     moguće dobiti potpuno (matematički i formatom) ispravan izraz (\texttt{<izraz2>}).
-  \item \texttt{Potpuno netocno} -- ispisani izraz je ispravno formatiran,
+  \item \texttt{Potpuno netocno} -- ispisani izraz je dobro formatiran,
     matematički nije točan i nije ga moguće ispraviti koristeći najviše dvije
     zamjene znakova.
 \end{itemize}

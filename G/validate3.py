@@ -14,7 +14,7 @@ def check(lines):
 
     n = int(lines[0])
 
-    assert 1 <= n <= MAXN, "n je izvan intervala"
+    assert 2 <= n <= MAXN, "n je izvan intervala"
     nl.append("{}{}".format(n, E))
 
     cnt = [0] * (2*n)
