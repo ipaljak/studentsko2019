@@ -39,6 +39,7 @@ bool ok (string s, int tip) {
 }
 
 void rjesi () {
+  random_shuffle(st.begin(), st.end());
     if (ok(s, 0)) {
         if (ok(s, 1)) {
             cout << "Tocno";

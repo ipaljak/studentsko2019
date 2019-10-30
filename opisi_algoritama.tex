@@ -80,7 +80,7 @@ ili jednak nekoj vrijednosti. To možemo koristeći \textit{Fenwickovo stablo},
 po jedno za svaku boju majice. Budući da je broj bodova natjecatelja uvijek
 između $0$ i $3\cdot10^5$, nema problema s održavanjem te strukture u memoriji.
 
-Vremenska složenost je $\mathcal{O}(n + q \log{} \text{MAXD})$
+Vremenska složenost je $\mathcal{O}(n + q \log{} \text{MAXD})$.
 
 \subsection*{Zadatak D -- Dramatični Dvoboj}
 \textsf{Predložio: Patrick Pavić}\\
@@ -191,7 +191,7 @@ Izračunat ćemo za svaki stupac $j$, koja je najveća površina pravokutnika č
 je desna granica upravo stupac $j$. Nakon što smo to napravili, odgovor za prvih
 $j$ stupaca je maksimum među tim vrijednostima od $1$ do $j$.
 
-a svaki stupac pronađimo prvi stupac lijevo od njega koji je manji od njega, za
+  Za svaki stupac pronađimo prvi stupac lijevo od njega koji je manji od njega, za
 stupac $j$ neka je to $left[j]$, gdje uzimamo $left[j] = 0$ ako takav stupac ne
 postoji. Promatrajmo neki stupac na indeksu $p_1$ s visinom $h_1$. Možemo
 pratiti padajući niz stupaca $p_2 = left[p_1]$, $p_3 = left[p_2]$, \dots,
@@ -200,11 +200,11 @@ redom $h_1$, $h_2$, \dots, $h_m$. Svakom pravokutniku čija je desna granica
 $p_1$, možemo pomicati lijevu granicu dok ne dođemo do nekog $p_i$, čime samo
 povećavamo površinu. Dakle, dovoljno je razmatrati samo one pravokutnike čija je
 lijeva granica za jedan desno nekog od indeksa $p_1$, $p_2$, \dots, $p_m$.
-Odgovor za stupac $p_1$ je maksimum od vrijednosti $(p_1 - p_{i+1}) * h_i$, za
-$i$ između $1$ i $m-1$, što možemo napisati i kao $h_i * p_1 - h_i * p_{i+1}$.
+Odgovor za stupac $p_1$ je maksimum od vrijednosti $(p_1 - p_{i+1}) \cdot h_i$, za
+$i$ između $1$ i $m-1$, što možemo napisati i kao $h_i \cdot p_1 - h_i \cdot p_{i+1}$.
 
 Definirajmo zato za svaki stupac funkciju -- za stupac $i$ imamo
-$f_i(x) = h_i * x - h_i * left[i]$. Tada vidimo da je odgovor za stupac $p_1$
+$f_i(x) = h_i \cdot x - h_i \cdot left[i]$. Tada vidimo da je odgovor za stupac $p_1$
 zapravo maksimum od vrijednosti $f_{p_1}(p_1), f_{p_2}(p_1), \dots, f_{p_{m-1}} (p_1)$.
 Budući da su sve navedene funkcije linearne, ovo je poznati problem u kojem je
 potrebno održavati gornji envelope danih pravaca (tzv. \textit{convex hull trick}).
@@ -230,9 +230,9 @@ Naivno brisanje pravaca daje kvadratnu složenost u slučaju da u stablu postoji
 dugački lanac koji završava s čvorom koji ima veliki stupanj.
 
 Da bismo efikasno napravili promjene, pri ubacivanju možemo binarnim
-pretraživanjem pronaći poziciju u ljuski gdje je potrebno ubaciti novi pravac.
+pretraživanjem pronaći poziciju u ljusci gdje je potrebno ubaciti novi pravac.
 Potrebno je zabilježiti tu promjenu te ažurirati veličinu ljuske, a pri povratku
-je onda lagano rekonstruirati originalni hull.
+je onda lagano rekonstruirati originalnu ljusku.
 
 Za više detalja pogledajte i zadatak \textit{Harbingers} sa CEOI 2009 koji je
 popularizirao ovaj algoritam u svijetu natjecateljskog programiranja.
@@ -287,7 +287,9 @@ Prijelazi dinamike su:
   dp(X, 2) &= dp(PAR, 2) + dp(X, 1) + 2 \cdot dp(BK, 0)
 \end{align*}
 
-Vremenska složenost je $\mathcal{O}(n)$
+Završni odgovor za čvor $X$ spremljen je u $dp(X,1)$.
+
+Vremenska složenost je $\mathcal{O}(n)$.
 
 
 \end{document}

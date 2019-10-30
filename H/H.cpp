@@ -6,6 +6,7 @@ using namespace std;
 #define Y second
 
 typedef long long llint;
+typedef long double ld;
 typedef pair <int, int> pi;
 typedef pair <llint, llint> pii;
 
@@ -33,7 +34,7 @@ inline llint f (pii p, int t) {
 }
 
 inline bool ccw (pii a, pii b, pii c) {
-    return a.X * (b.Y - c.Y) + b.X * (c.Y - a.Y) + c.X * (a.Y - b.Y) >= 0;
+    return (ld)a.X * (b.Y - c.Y) + (ld)b.X * (c.Y - a.Y) + (ld)c.X * (a.Y - b.Y) >= 0;
 }
 
 int ubaci (int x, int pos) {
